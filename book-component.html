@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Book Cards | Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="book-component.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Library Showcase</p>
+        <h1>Animated 3D Book Cards</h1>
+        <p>Hover to open each book, read the details, and issue titles with smooth page animation.</p>
+      </div>
+      <a href="index.html" class="back-link">Back to Home</a>
+    </header>
+
+    <section class="grid-wrap">
+      <article class="book-card" data-id="1">
+        <div class="book-view">
+          <div class="book-cover">
+            <span class="cover-title">Smart Library</span>
+          </div>
+          <div class="book-spine"></div>
+          <div class="book-pages">
+            <div class="page front-page"></div>
+            <div class="page inner-page">
+              <div class="page-content">
+                <h2>Smart Library</h2>
+                <p><strong>Author:</strong> A. Reader</p>
+                <p><strong>Category:</strong> Technology</p>
+                <p><strong>Availability:</strong> <span class="status">Available</span></p>
+                <button class="issue-btn">Issue Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="2">
+        <div class="book-view">
+          <div class="book-cover cover-purple">
+            <span class="cover-title">Data Waves</span>
+          </div>
+          <div class="book-spine"></div>
+          <div class="book-pages">
+            <div class="page front-page"></div>
+            <div class="page inner-page">
+              <div class="page-content">
+                <h2>Data Waves</h2>
+                <p><strong>Author:</strong> L. Turner</p>
+                <p><strong>Category:</strong> Science</p>
+                <p><strong>Availability:</strong> <span class="status">Issued</span></p>
+                <button class="issue-btn">Return Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="3">
+        <div class="book-view">
+          <div class="book-cover cover-teal">
+            <span class="cover-title">Library AI</span>
+          </div>
+          <div class="book-spine"></div>
+          <div class="book-pages">
+            <div class="page front-page"></div>
+            <div class="page inner-page">
+              <div class="page-content">
+                <h2>Library AI</h2>
+                <p><strong>Author:</strong> J. Parker</p>
+                <p><strong>Category:</strong> Artificial Intelligence</p>
+                <p><strong>Availability:</strong> <span class="status">Available</span></p>
+                <button class="issue-btn">Issue Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="book-component.js"></script>
+</body>
+</html>

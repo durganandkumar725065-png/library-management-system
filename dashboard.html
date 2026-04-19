@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <main class="dashboard-page">
+    <header class="dashboard-header glass-card">
+      <div>
+        <p class="eyebrow">Library Analytics</p>
+        <h1 id="welcomeTitle">Welcome</h1>
+        <p id="roleLabel">Role: User</p>
+      </div>
+      <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+    </header>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <p>Total Books2 </p>
+        <strong id="statTotal">0</strong>
+      </article>
+      <article class="stat-card">
+        <p>Issued Books 5</p>
+        <strong id="statIssued">1</strong>
+      </article>
+      <article class="stat-card">
+        <p>Available Books 4</p>
+        <strong id="statAvailable">1</strong>
+      </article>
+      <article class="stat-card">
+        <p>Library Hubs 4</p>
+        <strong id="statLibraries">1</strong>
+      </article>
+    </section>
+
+    <section class="cards-grid">
+      <article class="panel-card">
+        <h2>Session Details</h2>
+        <p id="sessionText">Loading your session details...</p>
+      </article>
+      <article class="panel-card">
+        <h2>Smart Insights</h2>
+        <ul>
+          <li>Recommended: Read latest distributed systems articles.</li>
+          <li>Popular pick: "Networked Libraries" is trending now.</li>
+          <li>Tip: Use role-based dashboards for Admin and User views.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

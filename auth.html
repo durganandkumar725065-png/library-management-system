@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Login / Signup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-panel glass-card">
+      <div class="auth-head">
+        <div>
+          <p class="eyebrow">Smart Library Access</p>
+          <h1>Login or Register</h1>
+          <p>Secure access for Admin and User roles. Demo uses browser storage only.</p>
+        </div>
+        <a class="link-button" href="index.html">Back to Homepage</a>
+      </div>
+
+      <div class="tab-switcher">
+        <button class="tab active" id="loginTab">Login</button>
+        <button class="tab" id="signupTab">Signup</button>
+      </div>
+
+      <section class="form-card active" id="loginFormCard">
+        <form id="loginForm" novalidate>
+          <div class="input-group">
+            <span class="icon">📧</span>
+            <input type="email" id="loginEmail" placeholder="Email address" required />
+          </div>
+
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input type="password" id="loginPassword" placeholder="Password" required minlength="8" />
+            <button type="button" class="icon-btn" data-target="loginPassword">👁️</button>
+          </div>
+
+          <div class="row split-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe" />
+              Remember Me
+            </label>
+            <label class="small-label">
+              Role
+              <select id="loginRole">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </label>
+          </div>
+
+          <p class="message" id="loginMessage"></p>
+          <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+      </section>
+
+      <section class="form-card" id="signupFormCard">
+        <form id="signupForm" novalidate>
+          <div class="input-group">
+            <span class="icon">👤</span>
+            <input type="text" id="signupName" placeholder="Full name" required />
+          </div>
+
+          <div class="input-group">
+            <span class="icon">📧</span>
+            <input type="email" id="signupEmail" placeholder="Email address" required />
+          </div>
+
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input type="password" id="signupPassword" placeholder="Password" required minlength="8" />
+            <button type="button" class="icon-btn" data-target="signupPassword">👁️</button>
+          </div>
+
+          <div class="row split-row">
+            <label class="small-label">
+              Role
+              <select id="signupRole">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </label>
+            <span class="hint">Password must be at least 8 characters.</span>
+          </div>
+
+          <p class="message" id="signupMessage"></p>
+          <button class="btn btn-secondary" type="submit">Create Account</button>
+        </form>
+      </section>
+
+      <div class="auth-footer">
+        <p>Quick demo with localStorage. Perfect for hackathon presentation.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

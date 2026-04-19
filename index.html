@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intelligent Distributed Library Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Distributed Library</div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#books">Books</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn btn-primary" id="openLoginBtn">Login / Signup</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">Hackathon Ready</span>
+        <h1>Intelligent Distributed Library Management System</h1>
+        <p>Manage books across multiple library hubs with smart recommendations, live availability checks, and modern library analytics.</p>
+        <div class="hero-actions">
+          <a href="#books" class="btn btn-secondary">Explore Books</a>
+          <button class="btn btn-primary" id="openLoginBtn2">Start Demo</button>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <article class="summary-card">
+          <h3>Modern UI</h3>
+          <p>Clean and professional interface for fast navigation.</p>
+        </article>
+        <article class="summary-card">
+          <h3>Distributed Libraries</h3>
+          <p>Track book availability across different locations.</p>
+        </article>
+        <article class="summary-card">
+          <h3>Smart Recommendations</h3>
+          <p>Get intelligent book suggestions based on trends.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="section-heading">
+        <h2>Key Features</h2>
+        <p>Designed for librarians, readers, and distributed library networks.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>User Login & Signup</h3>
+          <p>Secure login and signup screens for library members.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Dashboard Overview</h3>
+          <p>Live analytics for total books, issued books, and available inventory.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Book Management</h3>
+          <p>Easily add, search, issue, and return books.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Library Network</h3>
+          <p>Check stock across multiple libraries in one place.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="dashboard">
+      <div class="section-heading">
+        <h2>Dashboard</h2>
+        <p>Real-time metrics to guide your library decisions.</p>
+      </div>
+      <div class="dashboard-grid">
+        <article class="metric-card">
+          <h3>Total Books</h3>
+          <span id="totalBooks">0</span>
+        </article>
+        <article class="metric-card">
+          <h3>Issued Books</h3>
+          <span id="issuedBooks">0</span>
+        </article>
+        <article class="metric-card">
+          <h3>Available Books</h3>
+          <span id="availableBooks">0</span>
+        </article>
+      </div>
+      <div class="dashboard-cards">
+        <article class="insight-card">
+          <h3>Library Network</h3>
+          <p>View distributed availability across multiple library branches.</p>
+        </article>
+        <article class="insight-card">
+          <h3>Smart Suggestions</h3>
+          <p>Recommended titles based on circulation patterns.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="books-section" id="books">
+      <div class="section-heading">
+        <h2>Book Management</h2>
+        <p>Add new titles, search inventory, and issue or return books.</p>
+      </div>
+      <div class="books-grid">
+        <div class="book-panel">
+          <h3>Add a New Book</h3>
+          <form id="addBookForm">
+            <label>Title</label>
+            <input type="text" id="bookTitle" placeholder="Enter book title" required />
+            <label>Author</label>
+            <input type="text" id="bookAuthor" placeholder="Enter author name" required />
+            <label>Library</label>
+            <select id="bookLibrary">
+              <option value="Central Branch">Central Branch</option>
+              <option value="East Hub">East Hub</option>
+              <option value="North Library">North Library</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Add Book</button>
+          </form>
+        </div>
+        <div class="book-panel search-panel">
+          <h3>Search Inventory</h3>
+          <input type="text" id="searchInput" placeholder="Search by title or author" />
+          <div class="book-list" id="bookList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="distributed-section">
+      <div class="section-heading">
+        <h2>Distributed Library Concept</h2>
+        <p>Multiple library locations working as one intelligent system.</p>
+      </div>
+      <div class="library-grid" id="libraryGrid">
+        <article class="library-card">
+          <h3>Central Branch</h3>
+          <p>Available: 32</p>
+        </article>
+        <article class="library-card">
+          <h3>East Hub</h3>
+          <p>Available: 24</p>
+        </article>
+        <article class="library-card">
+          <h3>North Library</h3>
+          <p>Available: 18</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="intelligent-section">
+      <div class="section-heading">
+        <h2>Intelligent Features</h2>
+        <p>Recommendations and popular titles to help readers discover books.</p>
+      </div>
+      <div class="recommendation-grid">
+        <article class="recommendation-card">
+          <h3>Recommended for You</h3>
+          <ul id="recommendationList">
+            <li>Data Science Patterns</li>
+            <li>Modern UX Design</li>
+            <li>Distributed Systems</li>
+          </ul>
+        </article>
+        <article class="recommendation-card">
+          <h3>Popular Books</h3>
+          <ul id="popularList">
+            <li>Networked Libraries</li>
+            <li>AI in Education</li>
+            <li>Cybersecurity Basics</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="section-heading">
+        <h2>Contact</h2>
+        <p>Reach out for project collaboration or support.</p>
+      </div>
+      <div class="contact-card">
+        <p><strong>Email:</strong> info@distributedlibrary.ai</p>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Location:</strong> Global Library Network</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Intelligent Distributed Library Management System | Hackathon Demo</p>
+    <p>Designed for efficient book tracking, smart recommendations, and networked library operations.</p>
+  </footer>
+
+  <div class="modal-overlay hidden" id="authModal">
+    <div class="modal-card">
+      <button class="close-btn" id="closeModal">✕</button>
+      <div class="auth-header">
+        <h2 id="authTitle">Login to Library</h2>
+        <p>Use the system interface to simulate a library management experience.</p>
+      </div>
+      <form id="authForm">
+        <div class="auth-fields">
+          <label>Email</label>
+          <input type="email" id="authEmail" placeholder="name@example.com" required />
+          <label>Password</label>
+          <input type="password" id="authPassword" placeholder="Enter password" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+      <div class="toggle-auth">
+        <p id="toggleText">Don't have an account?</p>
+        <button class="btn btn-secondary" id="switchAuth">Signup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<section id="books">
+    <h2>📚 Library Books</h2>
+
+    <input type="text" id="bookName" placeholder="Book Name">
+    <input type="text" id="libraryName" placeholder="Library Name">
+    <input type="text" id="imageUrl" placeholder="Image URL">
+    <button onclick="addBook()">Add Book</button>
+
+    <div class="grid" id="bookGrid"></div>
+</section>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Books Grid</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Book */
+.book {
+    perspective: 1000px;
+}
+
+.book-inner {
+    width: 200px;
+    height: 280px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.book:hover .book-inner {
+    transform: rotateY(-160deg);
+}
+
+.book-front, .book-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+/* Front with image */
+.book-front {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Back */
+.book-back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2ecc71;
+}
+</style>
+
+</head>
+<body>
+
+<h1>📚 Library Books</h1>
+
+<div class="grid">
+
+    <!-- Book 1 -->
+    <div class="book">
+        <div class="book-inner">
+            <div class="book-front" style="background-image:url('https://images.unsplash.com/photo-1512820790803-83ca734da794')">
+                Cyber Security
+            </div>
+            <div class="book-back">
+                <h3>Cyber Security</h3>
+                <p>Author: John</p>
+                <button>Issue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book 2 -->
+    <div class="book">
+        <div class="book-inner">
+            <div class="book-front" style="background-image:url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f')">
+                Data Structures
+            </div>
+            <div class="book-back">
+                <h3>Data Structures</h3>
+                <p>Author: Mark</p>
+                <button>Issue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book 3 -->
+    <div class="book">
+        <div class="book-inner">
+            <div class="book-front" style="background-image:url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d')">
+                AI Basics
+            </div>
+            <div class="book-back">
+                <h3>AI Basics</h3>
+                <p>Author: Smith</p>
+                <button>Issue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book 4 -->
+    <div class="book">
+        <div class="book-inner">
+            <div class="book-front" style="background-image:url('https://images.unsplash.com/photo-1516979187457-637abb4f9353')">
+                Web Dev
+            </div>
+            <div class="book-back">
+                <h3>Web Development</h3>
+                <p>Author: Alex</p>
+                <button>Issue</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

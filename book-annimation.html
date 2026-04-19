@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Animation</title>
+
+<style>
+body {
+    background: #f4f6f9;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Book container */
+.book {
+    width: 200px;
+    height: 280px;
+    perspective: 1000px;
+}
+
+/* Inner animation */
+.book-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Hover animation (open book) */
+.book:hover .book-inner {
+    transform: rotateY(-160deg);
+}
+
+/* Front cover */
+.book-front, .book-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+/* Book cover with image */
+.book-front {
+    background: url("https://images.unsplash.com/photo-1512820790803-83ca734da794") center/cover;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Back side */
+.book-back {
+    background: white;
+    transform: rotateY(180deg);
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="book">
+    <div class="book-inner">
+        
+        <!-- Front Cover -->
+        <div class="book-front">
+            Cyber Security
+        </div>
+
+        <!-- Inside Page -->
+        <div class="book-back">
+            <h3>Cyber Security</h3>
+            <p>Author: John Smith</p>
+            <p>Category: Security</p>
+            <button>Issue Book</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
